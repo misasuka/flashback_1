@@ -1,0 +1,159 @@
+:root {
+  --bg: #f3f5f9;
+  --panel: #ffffff;
+  --text: #162033;
+  --muted: #63708a;
+  --line: #dce2ef;
+  --primary: #2254ff;
+  --primary-soft: #e8eeff;
+  --ok: #107a41;
+  --wrong: #c21f39;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at top, #ffffff, var(--bg));
+}
+
+.app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.subtitle {
+  margin-top: 8px;
+  color: var(--muted);
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 12px 30px rgba(39, 63, 124, 0.08);
+}
+
+.hidden {
+  display: none;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(120px, 1fr));
+  gap: 12px;
+}
+
+.stat-card {
+  background: var(--primary-soft);
+  border-radius: 12px;
+  padding: 10px 14px;
+  display: grid;
+  gap: 4px;
+}
+
+.stat-card span {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.stat-card strong {
+  font-size: 1.4rem;
+}
+
+.card {
+  margin-top: 16px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.tag {
+  font-size: 0.8rem;
+  color: var(--primary);
+  margin: 0;
+}
+
+.hint {
+  color: var(--muted);
+  font-size: 0.92rem;
+  margin-bottom: 0;
+}
+
+.timeline {
+  margin-top: 10px;
+  display: grid;
+  gap: 10px;
+}
+
+.timeline-item {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px 14px;
+  background: #fff;
+}
+
+.timeline-item h4 {
+  margin: 0;
+}
+
+.timeline-item p {
+  margin: 6px 0 0;
+  color: #3f4a63;
+}
+
+.timeline-date {
+  font-size: 0.88rem;
+  color: var(--primary);
+  margin: 0;
+}
+
+.insert-btn,
+.btn {
+  border: 1px dashed #a7b8f4;
+  background: #f8faff;
+  color: var(--primary);
+  border-radius: 999px;
+  font-weight: 600;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+.insert-btn:hover,
+.btn:hover {
+  background: #edf2ff;
+}
+
+.insert-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.feedback {
+  min-height: 24px;
+  margin-top: 14px;
+  font-weight: 600;
+}
+
+.feedback.ok {
+  color: var(--ok);
+}
+
+.feedback.wrong {
+  color: var(--wrong);
+}
+
+#result-screen {
+  text-align: center;
+}

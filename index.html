@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>历史时间轴挑战</title>
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="topbar">
+        <h1>历史时间轴挑战</h1>
+        <p class="subtitle">将事件插入正确时间位置（1949年以前）</p>
+      </header>
+
+      <section id="game-screen" class="panel">
+        <div class="stats">
+          <div class="stat-card">
+            <span>当前分数</span>
+            <strong id="score">0</strong>
+          </div>
+          <div class="stat-card">
+            <span>已完成题数</span>
+            <strong id="progress">0 / 30</strong>
+          </div>
+        </div>
+
+        <article class="card current-event">
+          <p class="tag">待放置事件</p>
+          <h2 id="event-title">加载中...</h2>
+          <p id="event-description"></p>
+          <p class="hint">点击下方时间轴中的“插入到这里”完成作答</p>
+        </article>
+
+        <section>
+          <h3>时间轴</h3>
+          <div id="timeline" class="timeline"></div>
+        </section>
+
+        <p id="feedback" class="feedback"></p>
+      </section>
+
+      <section id="result-screen" class="panel hidden">
+        <h2>本局结束</h2>
+        <p id="final-score"></p>
+        <button id="restart-btn" class="btn">重新开始</button>
+      </section>
+    </main>
+
+    <script src="./js/events-fallback.js"></script>
+    <script src="./js/data.js"></script>
+    <script src="./js/game.js"></script>
+  </body>
+</html>
